@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: optional-django
+Version: 0.1.0
+Summary: Utils for apps to provide optional support for django applications
+Home-page: https://github.com/markfinger/optional-django
+Author: Mark Finger
+Author-email: markfinger@gmail.com
+License: UNKNOWN
+Description: Documentation at https://github.com/markfinger/optional-django
+Platform: UNKNOWN

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: npm
+Version: 0.1.1
+Summary: Python bindings and utils for npm.
+Home-page: https://github.com/markfinger/python-npm
+Author: Mark Finger
+Author-email: markfinger@gmail.com
+License: UNKNOWN
+Description: Documentation at https://github.com/markfinger/python-npm
+Platform: UNKNOWN
