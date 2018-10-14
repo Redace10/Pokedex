@@ -12,7 +12,7 @@ ap.add_argument("-o", "--output", required=True, help="path to output directory 
 args = vars(ap.parse_args())
 
 API_KEY = "e03905dd934649659931be63098e10a3"
-MAX_RESULTS = 250
+MAX_RESULTS = 1000
 GROUP_SIZE = 50
  
 # set the endpoint API URL
@@ -20,7 +20,7 @@ URL = "https://api.cognitive.microsoft.com/bing/v5.0/images/search"
 
 EXCEPTIONS = set([IOError, FileNotFoundError,
 	exceptions.RequestException, exceptions.HTTPError,
-	exceptions.ConnectionError, exceptions.Timeout])
+	exceptions.ConnectionError, exceptions.Timeout, exceptions.SSLError])
 
 # store the search term in a convenience variable then set the
 # headers and search parameters
