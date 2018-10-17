@@ -6,7 +6,7 @@ from keras.layers.core import Activation
 from keras.layers.core import Flatten
 from keras.layers.core import Dropout
 from keras.layers.core import Dense
-from keras import backend as Kpt
+from keras import backend as K
 
 class SmallerVGGNet:
 	@staticmethod
@@ -49,3 +49,17 @@ class SmallerVGGNet:
 		model.add(BatchNormalization(axis=chanDim))
 		model.add(MaxPooling2D(pool_size=(2, 2)))
 		model.add(Dropout(0.25))
+
+		# first (and only) set of FC => RELU layers
+		model.add(Flatten())
+		model.add(Dense(1024))
+		model.add(Activation("relu"))
+		model.add(BatchNormalization())
+		model.add(Dropout(0.5))
+ 
+		# softmax classifier
+		model.add(Dense(classes))
+		model.add(Activation("softmax"))
+ 
+		# return the constructed network architecture
+		return model
