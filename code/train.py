@@ -70,3 +70,41 @@ labels = lb.fit_transform(labels)
 # construct the image generator for data augmentation
 aug = ImageDataGenerator(rotation_range=25, width_shift_range=0.1, height_shift_range=0.1, 
     shear_range=0.2, zoom_range=0.2, horizontal_flip=True, fill_mode="nearest")
+
+# initialize the model
+print("[INFO] compiling model...")
+model = SmallerVGGNet.build(width=IMAGE_DIMS[1], height=IMAGE_DIMS[0], depth=IMAGE_DIMS[2], classes=len(lb.classes_))
+opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
+model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"])
+
+# train the network
+print("[INFO] training network...")
+H = model.fit_generator(
+	aug.flow(trainX, trainY, batch_size=BS),
+	validation_data=(testX, testY),
+	steps_per_epoch=len(trainX) // BS,
+	epochs=EPOCHS, verbose=1)
+
+# save the model to disk
+print("[INFO] serializing network...")
+model.save(args["model"])
+ 
+# save the label binarizer to disk
+print("[INFO] serializing label binarizer...")
+f = open(args["labelbin"], "wb")
+f.write(pickle.dumps(lb))
+f.close()
+
+# plot the training loss and accuracy
+plt.style.use("ggplot")
+plt.figure()
+N = EPOCHS
+plt.plot(np.arange(0, N), H.history["loss"], label="train_loss")
+plt.plot(np.arange(0, N), H.history["val_loss"], label="val_loss")
+plt.plot(np.arange(0, N), H.history["acc"], label="train_acc")
+plt.plot(np.arange(0, N), H.history["val_acc"], label="val_acc")
+plt.title("Training Loss and Accuracy")
+plt.xlabel("Epoch #")
+plt.ylabel("Loss/Accuracy")
+plt.legend(loc="upper left")
+plt.savefig(args["plot"])
