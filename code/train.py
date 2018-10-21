@@ -16,7 +16,6 @@ import pickle
 import cv2
 import os
 
-# construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-d", "--dataset", required=True, help="path to input dataset (i.e., directory of images)")
 ap.add_argument("-m", "--model", required=True, help="path to output model")
@@ -24,14 +23,12 @@ ap.add_argument("-l", "--labelbin", required=True, help="path to output label bi
 ap.add_argument("-p", "--plot", type=str, default="plot.png", help="path to output accuracy/loss plot")
 args = vars(ap.parse_args())
 
-# initialize the number of epochs to train for, initial learning rate,
-# batch size, and image dimensions
+# initialize the number of epochs to train for, initial learning rate, batch size, and image dimensions
 EPOCHS = 100
 INIT_LR = 0.001
 BS = 32
 IMAGE_DIMS = (96, 96, 3)
- 
-# initialize the data and labels
+
 data = []
 labels = []
  
@@ -49,8 +46,7 @@ for imagePath in imagePaths:
 	image = img_to_array(image)
 	data.append(image)
  
-	# extract the class label from the image path and update the
-	# labels list
+	# extract the class label from the image path and update the labels list
 	label = imagePath.split(os.path.sep)[-2]
 	labels.append(label)
 
@@ -63,8 +59,7 @@ print("[INFO] data matrix: {:.2f}MB".format(data.nbytes / (1024 * 1000.0)))
 lb = LabelBinarizer()
 labels = lb.fit_transform(labels)
  
-# partition the data into training and testing splits using 80% of
-# the data for training and the remaining 20% for testing
+# partition the data into training and testing splits: 80% for training and 20% for testing
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.2, random_state=42)
 
 # construct the image generator for data augmentation
@@ -85,11 +80,10 @@ H = model.fit_generator(
 	steps_per_epoch=len(trainX) // BS,
 	epochs=EPOCHS, verbose=1)
 
-# save the model to disk
+# save the results to disk
 print("[INFO] serializing network...")
 model.save(args["model"])
- 
-# save the label binarizer to disk
+
 print("[INFO] serializing label binarizer...")
 f = open(args["labelbin"], "wb")
 f.write(pickle.dumps(lb))

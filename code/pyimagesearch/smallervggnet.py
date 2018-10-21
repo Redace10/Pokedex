@@ -11,14 +11,12 @@ from keras import backend as K
 class SmallerVGGNet:
 	@staticmethod
 	def build(width, height, depth, classes):
-		# initialize the model along with the input shape to be
-		# "channels last" and the channels dimension itself
+		# initialize the model along with the input shape to be "channels last" and the channels dimension itself
 		model = Sequential()
 		inputShape = (height, width, depth)
 		chanDim = -1
  
-		# if we are using "channels first", update the input shape
-		# and channels dimension
+		# if we are using "channels first", update the input shape and channels dimension
 		if K.image_data_format() == "channels_first":
 			inputShape = (depth, height, width)
 			chanDim = 1
