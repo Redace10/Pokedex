@@ -7,4 +7,5 @@ Pokedex: A pokemon image classifier.
 Planning to implement this to Android and publish on the Google Play Store.
 
 # Features:
-
+- currently classifies 6 different Pokemon (Pikachu, Charmander, Squirtle, Bulbasaur, Gyarados, Rayquaza)
+- deep learning dataset consists of 2225 images of Pokemon
