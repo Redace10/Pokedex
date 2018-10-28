@@ -14,7 +14,6 @@ ap.add_argument("-l", "--labelbin", required=True, help="path to label binarizer
 ap.add_argument("-i", "--image", required=True, help="path to input image")
 args = vars(ap.parse_args())
 
-# load the image
 image = cv2.imread(args["image"])
 output = image.copy()
 
@@ -24,7 +23,6 @@ image = image.astype("float") / 255.0
 image = img_to_array(image)
 image = np.expand_dims(image, axis=0)
 
-# load the trained convolutional neural network and the label binarizer
 print("[INFO] loading network...")
 model = load_model(args["model"])
 lb = pickle.loads(open(args["labelbin"], "rb").read())
