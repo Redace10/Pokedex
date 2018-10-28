@@ -58,7 +58,7 @@ print("[INFO] data matrix: {:.2f}MB".format(data.nbytes / (1024 * 1000.0)))
 lb = LabelBinarizer()
 labels = lb.fit_transform(labels)
  
-# partition the data into training and testing splits: 80% for training and 20% for testing
+# 80% for training and 20% for testing
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.2, random_state=42)
 
 # construct the image generator for data augmentation
