@@ -6,7 +6,7 @@ from keras.optimizers import Adam
 from keras.preprocessing.image import img_to_array
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
-from pyimagesearch.smallervggnet import SmallerVGGNet
+from smallervggnet import SmallerVGGNet
 import matplotlib.pyplot as plt
 from imutils import paths
 import numpy as np
@@ -24,7 +24,7 @@ ap.add_argument("-p", "--plot", type=str, default="plot.png", help="path to outp
 args = vars(ap.parse_args())
 
 # initialize the number of epochs to train for, initial learning rate, batch size, and image dimensions
-EPOCHS = 200
+EPOCHS = 100
 INIT_LR = 0.001
 BS = 32
 IMAGE_DIMS = (96, 96, 3)
