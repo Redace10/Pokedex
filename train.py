@@ -40,13 +40,12 @@ random.shuffle(imagePaths)
 
 # loop over the input images
 for imagePath in imagePaths:
-	# load the image, pre-process it, and store it in the data list
+	# pre-process images and update data and label lists
 	image = cv2.imread(imagePath)
 	image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
 	image = img_to_array(image)
 	data.append(image)
  
-	# extract the class label from the image path and update the labels list
 	label = imagePath.split(os.path.sep)[-2]
 	labels.append(label)
 
