@@ -62,7 +62,7 @@ labels = lb.fit_transform(labels)
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.2, random_state=42)
 
 # construct the image generator for data augmentation
-aug = ImageDataGenerator(rotation_range=25, width_shift_range=0.1, height_shift_range=0.1, 
+datagen = ImageDataGenerator(rotation_range=25, width_shift_range=0.1, height_shift_range=0.1, 
     shear_range=0.2, zoom_range=0.2, horizontal_flip=True, fill_mode="nearest")
 
 # initialize the model
@@ -74,10 +74,11 @@ model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy
 # train the network
 print("[INFO] training network...")
 H = model.fit_generator(
-	aug.flow(trainX, trainY, batch_size=BS),
+	datagen.flow(trainX, trainY, batch_size=BS),
 	validation_data=(testX, testY),
 	steps_per_epoch=len(trainX) // BS,
-	epochs=EPOCHS, verbose=1)
+	epochs=EPOCHS,
+	verbose=1)
 
 # save the results to disk
 print("[INFO] serializing network...")
