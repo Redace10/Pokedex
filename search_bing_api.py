@@ -10,16 +10,18 @@ ap.add_argument("-o", "--output", required=True, help="path to output directory 
 args = vars(ap.parse_args())
 
 # need to update API_KEY everytime it expires
-API_KEY = "e03905dd934649659931be63098e10a3"
+API_KEY = "77615ba02c994c409232e0411b6dce7c"
 MAX_RESULTS = 1000
 GROUP_SIZE = 50
 
 # set the endpoint API URL
-URL = "https://api.cognitive.microsoft.com/bing/v5.0/images/search"
+URL = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
 
 EXCEPTIONS = set([IOError, FileNotFoundError,
 	exceptions.RequestException, exceptions.HTTPError,
-	exceptions.ConnectionError, exceptions.Timeout, exceptions.SSLError])
+	exceptions.ConnectionError, exceptions.Timeout, exceptions.SSLError, 
+	exceptions.TooManyRedirects,
+	])
 
 # store the search term in a convenience variable then set the headers and search parameters
 term = args["query"]
