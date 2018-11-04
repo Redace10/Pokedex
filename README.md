@@ -1,10 +1,17 @@
 # Pokedex
+
+# Sunnary
 Pokedex: A pokemon image classifier. 
 
-- Used Microsoft’s Bing Image Search API to programmatically download images via a query to build a deep learning image dataset.
-- Constructed Keras model by utilizing the VGGNet 
-
 Planning to implement this to Android and publish on the Google Play Store.
+
+# How to Run:
+If you are interested in running this application, you need to run the command 
+`python classify.py --model pokedex.model --labelbin lb.pickle --image <path to image that you want to classify>`
+
+Since the model has already been trained and stored in pokedex.model, you do not need to waste time to train the model.
+
+Keep in mind that you need to install the required libraries before running the command above: python, tensorflow, Keras, openCV, imutils, argparse, and numpy. These can simply be installed by using `pip install <module that you want installed>`
 
 # Features:
 - created image dataset by useing Microsoft’s Bing Image Search API to programmatically download images via a query
@@ -14,3 +21,6 @@ Planning to implement this to Android and publish on the Google Play Store.
 - achieves 96.43% accuracy for classifying pokemon images
 - currently classifies 6 different Pokemon (Pikachu, Charmander, Squirtle, Bulbasaur, Gyarados, Rayquaza)
 - deep learning dataset consists of 2225 images of Pokemon
+
+# Screenshots:
+
