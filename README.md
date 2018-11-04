@@ -1,7 +1,7 @@
 # Pokedex
 
 # Summary
-Pokedex: A pokemon image classifier. 
+An image classifier that can detect and recognize which Pokemon is in an image
 
 Planning to implement this to Android and publish on the Google Play Store.
 
