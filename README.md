@@ -12,6 +12,7 @@ If you are interested in running this application, you need to run the command
 Since the model has already been trained and stored in pokedex.model, you do not need to waste time to train the model.
 
 Keep in mind that you need to install the required libraries before running the command above: python, tensorflow, Keras, openCV, imutils, argparse, and numpy. These can simply be installed by using `pip install <module that you want installed>`
+It is recommend that you install these in a virtual environment.
 
 # Features:
 - created image dataset by useing Microsoft’s Bing Image Search API to programmatically download images via a query
