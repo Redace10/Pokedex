@@ -15,9 +15,9 @@ Keep in mind that you need to install the required libraries before running the 
 It is recommend that you install these in a virtual environment.
 
 # Features:
-- created image dataset by useing Microsoft’s Bing Image Search API to programmatically download images via a query
-- constructed a Keras model by following VGGNet CNN architecture
+- created image dataset by using Microsoft’s Bing Image Search API to programmatically download images via a query
 - added more images to the dataset by taking existing images and applying transformations to generate more image data
+- constructed a Keras model by following VGGNet CNN architecture
 - uses Adam Optimizer and Categorical Cross-entropy loss
 - achieves 96.43% accuracy for classifying pokemon images
 - currently classifies 6 different Pokemon (Pikachu, Charmander, Squirtle, Bulbasaur, Gyarados, Rayquaza)
