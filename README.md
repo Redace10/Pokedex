@@ -25,7 +25,11 @@ It is recommend that you install these in a virtual environment.
 
 # Screenshots:
 ![Alt text](/screenshots/train.PNG)
-![Alt text](/screenshots/plot.PNG)
+
+![Alt text](/screenshots/plot.png)
+
 ![Alt text](/screenshots/pikachu.PNG)
+
 ![Alt text](/screenshots/charmander.PNG)
+
 ![Alt text](/screenshots/charmander2.PNG)
