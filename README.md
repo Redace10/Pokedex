@@ -24,4 +24,8 @@ It is recommend that you install these in a virtual environment.
 - deep learning dataset consists of 2225 images of Pokemon
 
 # Screenshots:
-
+![Alt text](/screenshots/train.PNG)
+![Alt text](/screenshots/plot.PNG)
+![Alt text](/screenshots/pikachu.PNG)
+![Alt text](/screenshots/charmander.PNG)
+![Alt text](/screenshots/charmander2.PNG)
