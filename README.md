@@ -3,7 +3,9 @@
 # Summary
 An image classifier that can detect and recognize which Pokemon is in an image
 
-Planning to implement this to Android and publish on the Google Play Store.
+This project is still a work in progress.
+
+Planning to improve the accuracy of the model, add more types of Pokemon datasets, and publishing this on the Google Play Store.
 
 # How to Run:
 If you are interested in running this application, you need to run the command 
