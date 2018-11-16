@@ -24,6 +24,7 @@ It is recommend that you install these in a virtual environment.
 - achieves 96.43% accuracy for classifying pokemon images
 - currently classifies 6 different Pokemon (Pikachu, Charmander, Squirtle, Bulbasaur, Gyarados, Rayquaza)
 - deep learning dataset consists of 2225 images of Pokemon
+- takes around 3 hours to train using CPU. Takes only around 20 minutes to train using GPU.
 
 # Screenshots:
 ![Alt text](/screenshots/train.PNG)
