@@ -5,7 +5,7 @@ An image classifier that can detect and recognize which Pokemon is in an image
 
 This project is still a work in progress.
 
-Planning to improve the accuracy of the model by tweaking hyperparameters, add more types of Pokemon datasets, adding a label for "not a Pokemon", and publishing this on the Google Play Store.
+Planning to improve the accuracy of the model by tweaking hyperparameters and adding a label for "not a Pokemon". Also planning to add more types of Pokemon datasets to complete the first generation pokedex. [MAYBE] publishing this on the Google Play Store.
 
 # How to Run:
 If you are interested in running this application, you need to run the command 
