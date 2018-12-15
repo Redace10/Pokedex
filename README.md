@@ -5,6 +5,8 @@ An image classifier that can detect and recognize which Pokemon is in an image
 
 This project is still a work in progress.
 
+Disclaimer: Adrian Rosebrock's tutorial (See reference section below for the original article) was used and incredibly helpful in making this game.
+
 # TODO list:
 - improve the accuracy of the model by tweaking hyperparameters to find the right balance
 - adding a label for "not a Pokemon". 
@@ -40,3 +42,6 @@ It is recommend that you install these in a virtual environment.
 ![Alt text](/screenshots/charmander.PNG)
 
 ![Alt text](/screenshots/charmander2.PNG)
+
+# References
+Adrian Rosebrock, Keras and Convolutional Neural Networks (CNNs), (2018), pyimagesearch, https://www.pyimagesearch.com/2018/04/16/keras-and-convolutional-neural-networks-cnns/
