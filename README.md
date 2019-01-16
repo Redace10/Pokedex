@@ -5,7 +5,7 @@ An image classifier that can detect and recognize which Pokemon is in an image
 
 This project is still a work in progress.
 
-Disclaimer: Adrian Rosebrock's tutorial (See reference section below for the original article) was used and incredibly helpful in making this game.
+Disclaimer: Adrian Rosebrock's tutorial (See reference section below for the original article) was used and incredibly helpful in making this model.
 
 # TODO list:
 - improve the accuracy of the model by tweaking hyperparameters to find the right balance
