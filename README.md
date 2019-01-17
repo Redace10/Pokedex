@@ -21,7 +21,7 @@ It is recommend that you install these in a virtual environment.
 - uses Adam Optimizer and Categorical Cross-entropy loss
 - achieves 97.49% training accuracy and 88.76% validation accuracy for classifying pokemon images
 - currently classifies 12 different Pokemon (Pikachu, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Bulbasaur, Ivysaur, Venusaur, Gyarados, Rayquaza)
-- deep learning dataset consists of 4112 images of Pokemon
+- deep learning dataset consists of 4112 images of Pokemon (these images are not stored in github because they take up too much space)
 - takes around 5-6 hours to train using CPU. Takes only around 40 minutes to train using GPU.
 
 # Screenshots:
