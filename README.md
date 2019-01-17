@@ -39,21 +39,21 @@ It is recommend that you install these in a virtual environment.
 
 ![Alt text](/screenshots/pikachu.PNG)
 
-![Alt text](/screenshots/pikachu2.PNG)
+![Alt text](/screenshots/pikachu2.png)
 
-![Alt text](/screenshots/pikachu3.PNG)
+![Alt text](/screenshots/pikachu3.png)
 
 ![Alt text](/screenshots/charmander.PNG)
 
 ![Alt text](/screenshots/charmander2.PNG)
 
-![Alt text](/screenshots/charizard.PNG)
+![Alt text](/screenshots/charizard.png)
 
-![Alt text](/screenshots/venusaur.PNG)
+![Alt text](/screenshots/venusaur.png)
 
-![Alt text](/screenshots/blastoise.PNG)
+![Alt text](/screenshots/blastoise.png)
 
-![Alt text](/screenshots/gyarados.PNG)
+![Alt text](/screenshots/gyarados.png)
 
 # References
 Adrian Rosebrock, Keras and Convolutional Neural Networks (CNNs), (2018), pyimagesearch, https://www.pyimagesearch.com/2018/04/16/keras-and-convolutional-neural-networks-cnns/
